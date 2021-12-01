@@ -1,0 +1,39 @@
+.tur {color:#3349ff;}
+.turbg {background:#3349ff;}
+.turbuton {background:#3349ff; color: #fff;}
+
+
+
+.carousel-item {
+    height: 100vh;
+    min-height: 350px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .scrolls {
+    overflow-x: hidden;
+   
+    height: 80px;
+    white-space:nowrap
+}
+
+
+.yesil {background: #fbfbfb; color:#3349ff; border:solid 1px #ebebeb;}
+.mavi {background: #fbfbfb; color:#3349ff; border:solid 1px #ebebeb;}
+
+.btnpad {height: 200px; padding:50px; border-radius: 20px; font-size:30px;}
+
+.bikon {font-size: 30px;}
+
+.aktif {color: #6AF97D;}
+
+@media  screen and (max-width: 1366px) {
+
+
+    .btnpad {padding: none;}
+
+}
