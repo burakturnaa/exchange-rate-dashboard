@@ -38,21 +38,7 @@ export default {
                 this.invalid_token()
             }
             if (response.status == 200) {
-                // let arr_response = []
-                // let array_index = 0;
-                // response.data.forEach(el => {
-                // el.alis = this.format_money(el.alis,4,".",",")
-                // el.satis = this.format_money(el.satis,4,".",",")
-                // if (el.kur == "KGRTRY") {
-                //     this.kgrtry_alis = el.alis;
-                //     this.kgrtry_satis = el.satis;
-                // }else{
-                //     arr_response.push(el)
-                // }
-                // array_index++;
-                // });
-                // response.data.splice(0,1); // kgrtry değeri döviz kurları ile aynı data içerisinde geldiği için onu data içerisinden kaldırıyoruz
-                // KGRTRY indexi 0 olmalı.
+              
                 this.currency_json.sarrafiye_json =response.data;
                 console.log(this.currency_json.sarrafiye_json);
                 // this.loading = false;
@@ -93,21 +79,7 @@ export default {
                 this.invalid_token()
             }
             if (response.status == 200) {
-                // let arr_response = []
-                // let array_index = 0;
-                // response.data.forEach(el => {
-                    // el.alis = this.format_money(el.alis,4,".",",")
-                // el.satis = this.format_money(el.satis,4,".",",")
-                // if (el.kur == "KGRTRY") {
-                    //     this.kgrtry_alis = el.alis;
-                //     this.kgrtry_satis = el.satis;
-                // }else{
-                    //     arr_response.push(el)
-                // }
-                // array_index++;
-                // });
-                // response.data.splice(0,1); // kgrtry değeri döviz kurları ile aynı data içerisinde geldiği için onu data içerisinden kaldırıyoruz
-                // KGRTRY indexi 0 olmalı.
+              
                 this.currency_json.doviz_json =response.data;
                 console.log(this.currency_json.doviz_json);
                 // this.loading = false;
