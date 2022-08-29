@@ -1,6 +1,3 @@
-import { Date } from "core-js"
-import { getDate, isThisHour } from "date-fns"
-
 export const LogsAdminMixin = {
   methods: {
 
@@ -239,15 +236,6 @@ export const LogsAdminMixin = {
       this.filtered = true;
       this.loading = true;
       console.log('submit!')
-        // this.$v.ip.$touch()
-        // // this.$v.latest_date.$touch()
-        // // console.log(this.$v.latest_date.$invalid);
-        // console.log(this.$v.ip.$invalid);
-        // if (this.$v.ip.$invalid) {
-        //   console.log("error");
-        //   console.log(this.$v.clear_date.$invalid);
-        //   this.loading = false;
-        // } else { 
 
           var params = "?";
           params += "search=" + this.title;
@@ -264,53 +252,14 @@ export const LogsAdminMixin = {
 
           params += "&start_date="+first_date_text + "&end_date=" + second_date_text
 
-          // if (this.state != "") {
-          //   params += "&status=" + this.state;
-          // }
-
-          // if (this.start_date_text != ""){
-          //   params += "&sdate=" +this.start_date_text;
-          // }
-
-          // if (this.latest_date_text != ""){
-          //   params += "&edate=" +this.latest_date_text;
-          // }
-
-          // if (this.selected_customer.id != "" && this.selected_customer != ""){
-          //   params += "&cid=" + this.selected_customer.id;
-          // }
-          // if(this.only_uid != null){
-          //   params += "&only_uid=1";
-          // }
-
-          // if (this.limit != "" && this.limit != 0) {
-          //   params += "&limit=" + this.limit
-          // }
-
-          // if(this.title != ""){
-          //   params += "&title=" + this.title
-          // }
+         
           
           let offset = (this.pagination.page)
-          // var desc = "0";
-          // if (this.sort_status) {
-          //   desc = "1";
-          // }else{
-          //   desc = "0";
-          // }
+     
 
           let url = "";
-
-          // if ( this.sort_status !== "" && this.sort_name !== "") {
-            // url = `/get_logs_new28/${offset}/${this.pagination.rowsPerPage}?sort=${this.sort_name}&desc=${desc}&` + params;
-            // url = `/provider/api/sarrafiye_h/${offset}/${this.pagination.rowsPerPage}/` + params
+     
           url = `/provider/api/doviz_h/${params}&page=${offset}`
-          // }else{
-          //   // url = `/get_logs_new28/${offset}/${this.pagination.rowsPerPage}?` + params;
-          //   url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/` + params
-          // }
-          // var dateFormat = require('dateformat');
-
 
           return new Promise((resolve,reject)=>{
 
@@ -367,59 +316,6 @@ export const LogsAdminMixin = {
               reject(error)
             });
           })
-          
-          
-          // return new Promise((resolve,reject)=>{
-              
-          //     var post_config = {
-          //         method: 'get',
-          //         url: this.API_URL + url,
-          //         headers:{  
-          //             "Authorization": localStorage.token
-          //           },          
-          //       };
-          //       this.axios(post_config)
-          //       .then(response => {
-          //           // console.log(response);
-          //           //console.log(response);
-          //           if(response.data == undefined)   reject("no response")
-          //           if(response.status == 401){
-          //               console.log('401 Auth!');
-                        
-          //               this.logs = [];
-          //           }
-          //           if (response.status == 200) {
-          //       response.data.payload.forEach(el => {
-          //         let log_time = dateFormat(el.log_time,"dd-mm-yyyy hh:MM:ss")
-          //         el.log_time = log_time;
-          //       });
-          //       // console.log(response.data.payload);
-          //       this.logs = response.data.payload;
-          //       this.loading = false
-          //       this.pagination.totalItems  = response.data.length
-          //     }
-          //     resolve(response.data)
-          //   })
-          //   .catch( error => {
-          //     this.pagination.totalItems = 0
-          //     if(error.response.status == 401){
-          //       console.log('401 Auth!');
-                
-          //       this.logs = [];
-          //     }
-          //     if(error.response.status == 404){
-          //       this.logs = [];
-                
-          //     }
-          //     else{
-          //       console.log(error);
-          //     }
-          //     this.loading = false;
-          //     reject(error)
-          //   });
-          
-          // })
-        // }
     },
 
     doviz_clear_filters(){
@@ -483,13 +379,6 @@ export const LogsAdminMixin = {
       })
     },
 
-    
-
-    
-    // ----------------------------get_all_checkpoint------------------------------------------------
-    // ----------------------------get_all_checkpoint------------------------------------------------
-    // ----------------------------get_all_checkpoint------------------------------------------------
-    // ----------------------------get_all_checkpoint------------------------------------------------
     get_all_logs(){
         return new Promise((resolve,reject)=>{
         var username= 'Babak'
@@ -697,55 +586,12 @@ export const LogsAdminMixin = {
           }
 
           params += "&start_date="+first_date_text + "&end_date=" + second_date_text
-
-          // if (this.state != "") {
-          //   params += "&status=" + this.state;
-          // }
-
-          // if (this.start_date_text != ""){
-          //   params += "&sdate=" +this.start_date_text;
-          // }
-
-          // if (this.latest_date_text != ""){
-          //   params += "&edate=" +this.latest_date_text;
-          // }
-
-          // if (this.selected_customer.id != "" && this.selected_customer != ""){
-          //   params += "&cid=" + this.selected_customer.id;
-          // }
-          // if(this.only_uid != null){
-          //   params += "&only_uid=1";
-          // }
-
-          // if (this.limit != "" && this.limit != 0) {
-          //   params += "&limit=" + this.limit
-          // }
-
-          // if(this.title != ""){
-          //   params += "&title=" + this.title
-          // }
           
           let offset = (this.pagination.page)
-          // var desc = "0";
-          // if (this.sort_status) {
-          //   desc = "1";
-          // }else{
-          //   desc = "0";
-          // }
 
           let url = "";
 
-          // if ( this.sort_status !== "" && this.sort_name !== "") {
-            // url = `/get_logs_new28/${offset}/${this.pagination.rowsPerPage}?sort=${this.sort_name}&desc=${desc}&` + params;
-            // url = `/provider/api/sarrafiye_h/${offset}/${this.pagination.rowsPerPage}/` + params
           url = `/provider/api/sarrafiye_h/${params}&page=${offset}`
-          // }else{
-          //   // url = `/get_logs_new28/${offset}/${this.pagination.rowsPerPage}?` + params;
-          //   url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/` + params
-          // }
-          // var dateFormat = require('dateformat');
-
-
           return new Promise((resolve,reject)=>{
 
             var post_config = {
@@ -801,130 +647,22 @@ export const LogsAdminMixin = {
               reject(error)
             });
           })
-          
-          
-          // return new Promise((resolve,reject)=>{
-              
-          //     var post_config = {
-          //         method: 'get',
-          //         url: this.API_URL + url,
-          //         headers:{  
-          //             "Authorization": localStorage.token
-          //           },          
-          //       };
-          //       this.axios(post_config)
-          //       .then(response => {
-          //           // console.log(response);
-          //           //console.log(response);
-          //           if(response.data == undefined)   reject("no response")
-          //           if(response.status == 401){
-          //               console.log('401 Auth!');
-                        
-          //               this.logs = [];
-          //           }
-          //           if (response.status == 200) {
-          //       response.data.payload.forEach(el => {
-          //         let log_time = dateFormat(el.log_time,"dd-mm-yyyy hh:MM:ss")
-          //         el.log_time = log_time;
-          //       });
-          //       // console.log(response.data.payload);
-          //       this.logs = response.data.payload;
-          //       this.loading = false
-          //       this.pagination.totalItems  = response.data.length
-          //     }
-          //     resolve(response.data)
-          //   })
-          //   .catch( error => {
-          //     this.pagination.totalItems = 0
-          //     if(error.response.status == 401){
-          //       console.log('401 Auth!');
-                
-          //       this.logs = [];
-          //     }
-          //     if(error.response.status == 404){
-          //       this.logs = [];
-                
-          //     }
-          //     else{
-          //       console.log(error);
-          //     }
-          //     this.loading = false;
-          //     reject(error)
-          //   });
-          
-          // })
-        // }
       },
-
-
-
+    
       filter_doviz(){
         this.pagination.totalItems  = 0
         this.pagination.page = 1;
         this.filtered = true;
         this.loading = true;
         console.log('submit!')
-          // this.$v.ip.$touch()
-          // // this.$v.latest_date.$touch()
-          // // console.log(this.$v.latest_date.$invalid);
-          // console.log(this.$v.ip.$invalid);
-          // if (this.$v.ip.$invalid) {
-          //   console.log("error");
-          //   console.log(this.$v.clear_date.$invalid);
-          //   this.loading = false;
-          // } else { 
-  
+        
             var params = "?";
             params += "search=" + this.title;
   
-            // if (this.state != "") {
-            //   params += "&status=" + this.state;
-            // }
-  
-            // if (this.start_date_text != ""){
-            //   params += "&sdate=" +this.start_date_text;
-            // }
-  
-            // if (this.latest_date_text != ""){
-            //   params += "&edate=" +this.latest_date_text;
-            // }
-  
-            // if (this.selected_customer.id != "" && this.selected_customer != ""){
-            //   params += "&cid=" + this.selected_customer.id;
-            // }
-            // if(this.only_uid != null){
-            //   params += "&only_uid=1";
-            // }
-  
-            // if (this.limit != "" && this.limit != 0) {
-            //   params += "&limit=" + this.limit
-            // }
-  
-            // if(this.title != ""){
-            //   params += "&title=" + this.title
-            // }
-            
-            let offset = (this.pagination.page)
-            // var desc = "0";
-            // if (this.sort_status) {
-            //   desc = "1";
-            // }else{
-            //   desc = "0";
-            // }
-  
-            let url = "";
-  
-            // if ( this.sort_status !== "" && this.sort_name !== "") {
-              // url = `/get_logs_new28/${offset}/${this.pagination.rowsPerPage}?sort=${this.sort_name}&desc=${desc}&` + params;
-              // url = `/provider/api/sarrafiye_h/${offset}/${this.pagination.rowsPerPage}/` + params
+            let url = ""; 
+        
             url = `/provider/api/doviz_h/${params}&page=${offset}`
-            // }else{
-            //   // url = `/get_logs_new28/${offset}/${this.pagination.rowsPerPage}?` + params;
-            //   url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/` + params
-            // }
-            // var dateFormat = require('dateformat');
-  
-  
+         
             return new Promise((resolve,reject)=>{
   
               var post_config = {
@@ -979,60 +717,8 @@ export const LogsAdminMixin = {
                 this.pagination.page = 0;
                 reject(error)
               });
-            })
-            
-            
-            // return new Promise((resolve,reject)=>{
-                
-            //     var post_config = {
-            //         method: 'get',
-            //         url: this.API_URL + url,
-            //         headers:{  
-            //             "Authorization": localStorage.token
-            //           },          
-            //       };
-            //       this.axios(post_config)
-            //       .then(response => {
-            //           // console.log(response);
-            //           //console.log(response);
-            //           if(response.data == undefined)   reject("no response")
-            //           if(response.status == 401){
-            //               console.log('401 Auth!');
-                          
-            //               this.logs = [];
-            //           }
-            //           if (response.status == 200) {
-            //       response.data.payload.forEach(el => {
-            //         let log_time = dateFormat(el.log_time,"dd-mm-yyyy hh:MM:ss")
-            //         el.log_time = log_time;
-            //       });
-            //       // console.log(response.data.payload);
-            //       this.logs = response.data.payload;
-            //       this.loading = false
-            //       this.pagination.totalItems  = response.data.length
-            //     }
-            //     resolve(response.data)
-            //   })
-            //   .catch( error => {
-            //     this.pagination.totalItems = 0
-            //     if(error.response.status == 401){
-            //       console.log('401 Auth!');
-                  
-            //       this.logs = [];
-            //     }
-            //     if(error.response.status == 404){
-            //       this.logs = [];
-                  
-            //     }
-            //     else{
-            //       console.log(error);
-            //     }
-            //     this.loading = false;
-            //     reject(error)
-            //   });
-            
-            // })
-          // }
+            })        
+      
         },
 
       get_customers(){
@@ -1121,40 +807,8 @@ export const LogsAdminMixin = {
 
         params += "&start_date="+first_date_text + "&end_date=" + second_date_text
 
-        // if (this.state != "") {
-        //   params += "&status=" + this.state;
-        // }
-
-        // if (this.start_date_text != ""){
-        //   params += "&sdate=" +this.start_date_text;
-        // }
-
-        // if (this.latest_date_text != ""){
-        //   params += "&edate=" +this.latest_date_text;
-        // }
-
-        // if (this.selected_customer.id != "" && this.selected_customer != ""){
-        //   params += "&cid=" +this.selected_customer.id;
-        // }
-
-
          let offset =  (this.pagination.page)
-         let url = ""
-        //  if (this.filtered) {
-           
-        //    if ( this.sort_status !== "" && this.sort_name !== "") {
-        //      url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/?sort=${this.sort_name}&desc=${desc}&` + params;
-        //    }else{
-        //      url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/` + params;
-        //    }
-                           
-        //  }else{
-        //    if  ((this.sort_status !== "undefined" && this.sort_status !== "") && (this.sort_name !== "undefined" && this.sort_name !== "")){
-        //      url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/?sort=${this.sort_name}&desc=${desc}&` + params;
-        //     }else{
-        //       url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/` + params;
-        //     }
-        //   }
+         let url = ""     
           
           url = `/provider/api/sarrafiye_h/${params}&page=${offset}`
           
@@ -1227,13 +881,6 @@ export const LogsAdminMixin = {
         this.pagination.page = pageNumber;
         //this.getData();
          (async()=>{
-        //  var desc = "0";
-        //  if (this.sort_status) {
-        //    desc = "1";
-        //  }else{
-        //    desc = "0";
-        //  }
-
         var params = "?";
         params += "search=" + this.title;
         let first_date_text = ""
@@ -1247,40 +894,8 @@ export const LogsAdminMixin = {
 
         params += "&start_date="+first_date_text + "&end_date=" + second_date_text
 
-        // if (this.state != "") {
-        //   params += "&status=" + this.state;
-        // }
-
-        // if (this.start_date_text != ""){
-        //   params += "&sdate=" +this.start_date_text;
-        // }
-
-        // if (this.latest_date_text != ""){
-        //   params += "&edate=" +this.latest_date_text;
-        // }
-
-        // if (this.selected_customer.id != "" && this.selected_customer != ""){
-        //   params += "&cid=" +this.selected_customer.id;
-        // }
-
-
          let offset =  (this.pagination.page)
-         let url = ""
-        //  if (this.filtered) {
-           
-        //    if ( this.sort_status !== "" && this.sort_name !== "") {
-        //      url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/?sort=${this.sort_name}&desc=${desc}&` + params;
-        //    }else{
-        //      url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/` + params;
-        //    }
-                           
-        //  }else{
-        //    if  ((this.sort_status !== "undefined" && this.sort_status !== "") && (this.sort_name !== "undefined" && this.sort_name !== "")){
-        //      url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/?sort=${this.sort_name}&desc=${desc}&` + params;
-        //     }else{
-        //       url = `/admin/get_log_by_filter/${offset}/${this.pagination.rowsPerPage}/` + params;
-        //     }
-        //   }
+         let url = ""     
           
           url = `/provider/api/doviz_h/${params}&page=${offset}`
           
