@@ -1,12 +1,5 @@
-import { Date } from "core-js"
-import { getDate } from "date-fns"
-
 export const LogsMixin = {
   methods: {
-    // ----------------------------get_all_checkpoint------------------------------------------------
-    // ----------------------------get_all_checkpoint------------------------------------------------
-    // ----------------------------get_all_checkpoint------------------------------------------------
-    // ----------------------------get_all_checkpoint------------------------------------------------
     get_all_logs(){
         return new Promise((resolve,reject)=>{
         var username= 'Babak'
