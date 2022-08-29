@@ -4,27 +4,7 @@
     fluid
     tag="section"
   >
-      <!-- <v-col
-        cols="12"
-      >
-        <base-material-card
-          color="#1d1d1d"
-          class="px-5 py-3"
-          min-height="200px"
-          style="display:flow-root; text-align:center"
-        >
-          <template v-slot:heading>
-            <div @click="clickevent(0)" class="display-2 font-weight-light">
-              İşlemler
-            </div>
-            <div class="subtitle-1 font-weight-light">
-            </div>
-          </template>
-          <v-card-text >
-              
-          </v-card-text>
-        </base-material-card>
-      </v-col> -->
+    
       <v-col
         cols="12"
 
@@ -146,21 +126,6 @@
                       
                       </v-col>
 
-                  <!-- <v-col cols="12" lg="4">
-                     
-                    <v-text-field
-                      v-model.trim="ip"
-                      label="IP Adresi"
-                      prepend-icon="mdi-ip"
-                      :error-messages="ipErrors"
-                      @input="$v.ip.$touch()"
-                      @blur="$v.ip.$touch()"
-                      class="mt-5"
-                      v-on:keyup.enter="filter()"
-                      @keydown.space="(event) => event.preventDefault()"
-                    ></v-text-field>
-                        
-                  </v-col> -->
 
                   <v-col cols="12" lg="4">
                     <v-col
@@ -224,19 +189,7 @@
                     </v-select>
                   </v-col>
                   </v-col>
-
-                  <!-- <v-col cols="4">
-                    <v-checkbox
-                      v-model="only_uid"
-                      label="Sadece Hes Kodu Sorguları"
-                      color="indigo"
-                      value="true"
-                      hide-details
-                      class="mt-4"
-                      v-on:keyup.enter="filter()"
-                    ></v-checkbox>
-                  </v-col> -->
-
+                  
                   <v-col cols="12" class="text-right">
                     <v-btn
                     color="#050a23"
@@ -255,101 +208,12 @@
                          
                     </v-card-text>
                   </v-card>
-
-                
-                  <!-- <v-col cols="12">
-                    <v-text-field
-                      class="mr-10 ml-10"
-                      v-model="search_checkpoint"
-                      append-icon="mdi-magnify"
-                      :label="_T('search')"
-                      single-line
-                      hide-details
-                    ></v-text-field>
-                  </v-col> -->
-       
-
-                  <!-- <v-card class="col-lg-4 col-xs-10 col-sm-10 col-md-10 m-5 d-inline-block my-auto" min-width="250px">
-
-                    <v-card-title>Kayıtları Temizle</v-card-title>
-                    
-                    <v-card-text class="mb-0">
-                      <v-row>
-                        <v-col cols="12">
-                      <v-menu
-                        v-model="clear_date_dialog"
-                        :close-on-content-click="false"
-                        :nudge-right="40"
-                        transition="scale-transition"
-                        offset-y
-                        min-width="auto"
-                        
-                      >
-                        <template v-slot:activator="{ on, attrs }">
-                          <v-text-field
-                          
-                            v-model="clear_date_text"
-                            label="Tarih"
-                            prepend-icon="mdi-calendar"
-                            hint="Seçili tarih öncesi olan kayıtlar silinecektir."
-                            persistent-hint
-                            readonly
-                            v-bind="attrs"
-                            :error-messages="clearDateErrors"
-                            @input="$v.clear_date.$touch()"
-                            @blur="$v.clear_date.$touch()"
-                            v-on="on"
-                            class="my-5"
-                            
-                          ></v-text-field>
-                        </template>
-                        <v-date-picker
-                        color="#050a23"
-                        class="m-0"
-                        locale="tr"
-                        v-model="clear_date"
-                        @input="clear_date_dialog = false"
-                        ></v-date-picker>
-                      </v-menu>
-                      
-                  </v-col>
-
-                  <v-col cols="12" class="text-right">
-                    <v-btn
-                    color="#050a23"
-                    @click="clear_all_logs"
-                    >
-                      Tüm Kayıtları Temizle
-                    </v-btn>
-                    <v-btn 
-                    color="#050a23"
-                    @click="clear_logs"
-                    >
-                      Temizle
-                    </v-btn>
-                  </v-col>
-                      </v-row>
-                         
-                    </v-card-text>
-                  </v-card> -->
+              
               </v-row>
 
                 
                 
               </template>
-
-              <!-- SLOT -->
-              <!-- <template v-slot:item.actions="{ item }">
-                 <v-icon color="rgb(5, 10, 35)" small class="mr-2" @click="devices(item)">mdi-devices</v-icon> 
-                <v-icon color="rgb(5, 10, 35)" small class="mr-2" @click="editItem(item)">mdi-pencil</v-icon>
-                <v-icon color="red" small class="mr-2" @click="deleteItem(item)">mdi-delete</v-icon>
-              </template> -->
-
-              <!-- <template v-slot:item.uid="{ item }">
-                <p v-if="item.uid.length >= 20 ">{{item.uid.substr(0,20) + "..."}}</p>
-                <p v-else>{{item.uid}}</p>
-              </template> -->
-            <!-- SLOT -->
 
             <template v-slot:item.risk="{ item }">
               
@@ -397,13 +261,7 @@
 
 
             </v-data-table>
-             <!-- <v-row width="40">
-                <v-col cols="12" lg="12">
-                        <v-col  v-if="progress_bar" cols="12" sm="12" md="12">
-                          <v-progress-linear indeterminate  color="blue"></v-progress-linear>
-                        </v-col>
-                </v-col>
-              </v-row> -->
+            
           </v-card-text> 
           
         <v-col cols="12" lg="12">
@@ -572,11 +430,7 @@ import { validationMixin } from 'vuelidate'
       _T() { return this.$t }, // for i18 ;)
       headers_all_check_points(){
           let tbl_headers =  [
-          // {
-          //   sortable: true,
-          //   text: "UID",
-          //   value: 'uid',
-          // },
+         
           {
             sortable: true,
             text: "Başlık",
@@ -595,32 +449,7 @@ import { validationMixin } from 'vuelidate'
             value: 'risk',
             align: 'center'
           },
-          // {
-          //   sortable: true,
-          //   text: "Kayıt Tarihi",
-          //   value: 'req_date',
-          //   align: 'center'
-          // },
-          // {
-          //   sortable: false,
-          //   text: "Saat",
-          //   value: 'req_time',
-          //   align: '',
-          // },
-          // {
-          //   sortable: false,
-          //   text: this.$t('status'),
-          //   value: 'status',
-          //   align: 'center',
-          // },
-          // {
-          //   sortable: false,
-          //   text: this.$t('description'),
-          //   value: 'description',
-          //   align: 'left',
-          // },
-        //   { text: this.$t('action'), value: "actions", align:"center", sortable: false }
-        
+               
         ]
         return tbl_headers ;
       },
@@ -646,8 +475,6 @@ import { validationMixin } from 'vuelidate'
           var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
           var yyyy = today.getFullYear();
           
-          // console.log("WATCH");
-
           today = yyyy + '-' + mm + '-' + dd;
           this.latest_date_text = today
         }
@@ -660,8 +487,6 @@ import { validationMixin } from 'vuelidate'
           var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
           var yyyy = today.getFullYear();
           
-          // console.log("WATCH");
-
           today = yyyy + '-' + mm + '-' + dd;
           this.start_date_text = today
         }
@@ -671,7 +496,6 @@ import { validationMixin } from 'vuelidate'
           if (typeof val != "undefined") {
 
             var d = new Date(val)
-            // console.log(d);
                 
             var day = "";
             
@@ -690,7 +514,6 @@ import { validationMixin } from 'vuelidate'
             var year = d.getFullYear()
             var formatted = `${day}-${month}-${year}`
 
-            // console.log(day);
             if (isNaN(day)) {
               this.clear_date_text = ""
             }else{
