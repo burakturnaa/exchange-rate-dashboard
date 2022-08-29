@@ -139,8 +139,6 @@ import '../../../assets/loginpage/vendor/animate/animate.css';
 import '../../../assets/loginpage/vendor/css-hamburgers/hamburgers.min.css';
 import '../../../assets/loginpage/vendor/select2/select2.min.css';
 import {EventBus} from '../../../views/dashboard/components/custom/event-bus'
-  // const css = require('../../../assets/css/sb-admin-2.css').toString();
-  // const css2 = require('../../../assets/css/stil.css').toString();
 var jwt = require('jsonwebtoken');
 import { required, numeric } from 'vuelidate/lib/validators'
 
@@ -363,22 +361,7 @@ import { required, numeric } from 'vuelidate/lib/validators'
 
     },
     async mounted(){
-
-      // EventBus.$off('login')
-
-    //   if (localStorage.token != "") {
-    //    let token_check = await this.check_token().catch(e => {
-         
-    //    })
-    //    console.log(token_check);
-    //    if (token_check.code==2000) {
-    //      this.$router.push({path: '/admin/devices'});
-    //    }
-    //  }
-
-    //  if (localStorage.token != "") {
-    //    this.$router.push({path: '/admin/devices'});
-    //  }
+    
     }
 
     //
@@ -882,11 +865,5 @@ iframe {
     opacity: 1;
   }
 }
-
-
-
-
-
-
 </style>
 
