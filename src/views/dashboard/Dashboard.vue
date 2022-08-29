@@ -912,31 +912,6 @@
         update_sort : false,
 
 
-        
-
-      //   json_fields: {
-      //   "UID": "uid",
-      //   "Başlık": "title",
-      //   "Seri No": "serial",
-      //   "Kayıt Tarihi" : "register_date",
-      //   "Token" : "token",
-      //   "Durum": {
-      //     field: "status",
-      //     callback: (val) => {
-      //       if (val == 0) {
-      //         return `${val} - Lisans Verilmemiş`
-      //       }else if (val == 1){
-      //         return `${val} - Sadece QR` 
-      //       }else if (val == 2){
-      //         return `${val} - QR ve Role` 
-      //       }else if (val == 3){
-      //         return `${val} - QR ve Klavye` 
-      //       }else{
-      //         return `${val} - QR, Klavye ve Role` 
-      //       }
-      //     },
-      //   },
-      // },
 
         
         devices : [],
