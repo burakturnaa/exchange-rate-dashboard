@@ -47,24 +47,7 @@
                             </v-col>
                        </v-row>
 
-                       <!-- <v-row class="screen-sm" v-if="index < 2" v-for="(item , index) in doviz" >
-                            <v-col cols="5" md="5" class="first">
-                                <div>
-                                    <h3>{{item.alis}}</h3>
-                                </div>
-                            </v-col>
-                            <v-col cols="2" md="2" class="middle">
-                                <div>
-                                    <h3>{{item.kur}}</h3>
-                                </div>
-                            </v-col>
-                            <v-col cols="5" md="5" class="last">
-                                <div>
-                                    <h3>{{item.satis}}</h3>
-                                </div>
-                            </v-col>
-                       </v-row> -->
-
+                    
                        <v-row class="screen-sm" >
                              <v-col  cols="12" md="6" class="last" style="display:flex !important; padding: 10px 10px !important; max-width:100% !important">
                                 <!-- <v-row  v-for="(item , index) in sarrafiye"> -->
@@ -78,28 +61,8 @@
                             </v-col>
                         </v-row>
 
-                       <!-- <v-row>
-                           <v-col cols="12" md="5" class="first">
-                                <div>
-                                    <h3>11.0800</h3>
-                                </div>
-                            </v-col>
-                            <v-col cols="6" md="2" class="middle">
-                                <div>
-                                    <h3>EUR</h3>
-                                </div>
-                            </v-col>
-                            <v-col cols="12" md="5" class="last">
-                                <div>
-                                    <h3>11.0900</h3>
-                                </div>
-                            </v-col>
-                       </v-row> -->
+                     
                     </div>
-
-
-
-
 
 
                      <div v-else-if="doviz != ''" class="doviz ">
@@ -121,24 +84,6 @@
                             </v-col>
                        </v-row>
 
-                       <!-- <v-row class="screen-sm" v-if="index < 2" v-for="(item , index) in doviz" >
-                            <v-col cols="5" md="5" class="first">
-                                <div>
-                                    <h3>{{item.alis}}</h3>
-                                </div>
-                            </v-col>
-                            <v-col cols="2" md="2" class="middle">
-                                <div>
-                                    <h3>{{item.kur}}</h3>
-                                </div>
-                            </v-col>
-                            <v-col cols="5" md="5" class="last">
-                                <div>
-                                    <h3>{{item.satis}}</h3>
-                                </div>
-                            </v-col>
-                       </v-row> -->
-
                        <v-row class="screen-sm" v-if="index < 1" v-for="(item , index) in doviz">
                              <v-col  v-for="(item , index) in doviz"  cols="12" md="6" class="last" style="display:flex !important; padding: 10px 10px !important; max-width:100% !important">
                                 <!-- <v-row  v-for="(item , index) in sarrafiye"> -->
@@ -151,28 +96,7 @@
                          <!-- </v-row> -->
                             </v-col>
                         </v-row>
-
-                       <!-- <v-row>
-                           <v-col cols="12" md="5" class="first">
-                                <div>
-                                    <h3>11.0800</h3>
-                                </div>
-                            </v-col>
-                            <v-col cols="6" md="2" class="middle">
-                                <div>
-                                    <h3>EUR</h3>
-                                </div>
-                            </v-col>
-                            <v-col cols="12" md="5" class="last">
-                                <div>
-                                    <h3>11.0900</h3>
-                                </div>
-                            </v-col>
-                       </v-row> -->
                     </div>
-
-                    
-
 
                     <div v-if="sarrafiye == ''" class="sarrafiye">
 
@@ -238,93 +162,10 @@
                             <!-- </v-row> -->
                                 </v-col>
                             </v-row>
-
-<!-- 
-                             <v-col  cols="12" md="6" class="last">
-                                 
-                                <div class="alis"  style="font-size:4   0px">
-                                    <h3>{{index}}</h3>
-                                    <div class="sarrafiye_ad">{{item.kur}}</div>
-                                    <h3>{{item.satis}}</h3>
-                                </div> -->
-                                
-                            <!-- </v-col> -->
-
-                            <!-- <v-col cols="12" md="6" class="first">
-                                <div class="alis">
-                                    <h3>2,107.00</h3>
-                                    <div class="sarrafiye_ad">YARIM</div>
-                                    <h3>2,159.00</h3>
-                                </div>
-                            </v-col> -->
-
-                         <!-- <v-row v-if="item.index%2!=0"  v-for="(item , index) in sarrafiye">
-                             <v-col cols="12" md="6" class="first float-right">
-                                <div class="alis"  >
-                                    <h3>{{item.alis}}</h3>
-                                    <div class="sarrafiye_ad">{{item.kur}}</div>
-                                    <h3>{{item.satis}}</h3>
-                                </div>
-                                
-                            </v-col>
-                         </v-row> -->
-
-                         <!-- <v-row>
-                             <v-col cols="12" md="6" class="first">
-                                <div class="alis">
-                                    <h3>4,376.00</h3>
-                                    <div class="sarrafiye_ad">ATA</div>
-                                    <h3>4,476.00</h3>
-                                </div>
-                                
-                            </v-col>
-                            <v-col cols="12" md="6" class="last">
-                                <div class="alis">
-                                    <h3>874.28</h3>
-                                    <div class="sarrafiye_ad">HAS</div>
-                                    <h3>874.28</h3>
-                                </div>
-                            </v-col>
-                         </v-row> -->
-
-                         <!-- <v-row>
-                             <v-col cols="12" md="6" class="first">
-                                <div class="alis">
-                                    <h3>874.28</h3>
-                                    <div class="sarrafiye_ad">22 GRAM</div>
-                                    <h3>874.28</h3>
-                                </div>
-                                
-                            </v-col>
-                            <v-col cols="12" md="6" class="last">
-                                <div class="alis">
-                                    <h3>874.28</h3>
-                                    <div class="sarrafiye_ad">24 GRAM</div>
-                                    <h3>874.28</h3>
-                                </div>
-                            </v-col>
-                         </v-row> -->
-
                     </div>
-
 
                     <div v-else class="sarrafiye">
 
-                            <!-- <v-row>
-                                <v-col  v-for="(item , index) in sarrafiye"  cols="12" md="6" class="last" style="display:flex !important; padding: 10px 10px !important; max-width:100% !important">
-                                    <div v-if="index%2==0"  class="alis"  style="font-size:40px">
-                                        <h3>{{item.alis}}</h3>
-                                        <div class="sarrafiye_ad">{{item.kur}}</div>
-                                        <h3>{{item.satis}}</h3>
-                                    </div>
-
-                                    <div  v-else class="alis"  style="font-size:40px">
-                                        <h3>{{item.alis}}</h3>
-                                        <div class="sarrafiye_ad">{{item.kur}}</div>
-                                        <h3>{{item.satis}}</h3>
-                                    </div>
-                                </v-col>
-                            </v-row> -->
 
                             <v-row class="screen-sm" v-if="index < 1" v-for="(item , index) in sarrafiye">
                                 <v-col v-if="index < 8"  v-for="(item , index) in sarrafiye"  cols="12" md="6" sm="12" class="last" style="display:flex !important; padding: 10px 10px !important; max-width:100% !important">
@@ -338,72 +179,8 @@
                             <!-- </v-row> -->
                                 </v-col>
                             </v-row>
-<!-- 
-                             <v-col  cols="12" md="6" class="last">
-                                 
-                                <div class="alis"  style="font-size:4   0px">
-                                    <h3>{{index}}</h3>
-                                    <div class="sarrafiye_ad">{{item.kur}}</div>
-                                    <h3>{{item.satis}}</h3>
-                                </div> -->
                                 
-                            <!-- </v-col> -->
-
-                            <!-- <v-col cols="12" md="6" class="first">
-                                <div class="alis">
-                                    <h3>2,107.00</h3>
-                                    <div class="sarrafiye_ad">YARIM</div>
-                                    <h3>2,159.00</h3>
-                                </div>
-                            </v-col> -->
-
-                         <!-- <v-row v-if="item.index%2!=0"  v-for="(item , index) in sarrafiye">
-                             <v-col cols="12" md="6" class="first float-right">
-                                <div class="alis"  >
-                                    <h3>{{item.alis}}</h3>
-                                    <div class="sarrafiye_ad">{{item.kur}}</div>
-                                    <h3>{{item.satis}}</h3>
-                                </div>
-                                
-                            </v-col>
-                         </v-row> -->
-
-                         <!-- <v-row>
-                             <v-col cols="12" md="6" class="first">
-                                <div class="alis">
-                                    <h3>4,376.00</h3>
-                                    <div class="sarrafiye_ad">ATA</div>
-                                    <h3>4,476.00</h3>
-                                </div>
-                                
-                            </v-col>
-                            <v-col cols="12" md="6" class="last">
-                                <div class="alis">
-                                    <h3>874.28</h3>
-                                    <div class="sarrafiye_ad">HAS</div>
-                                    <h3>874.28</h3>
-                                </div>
-                            </v-col>
-                         </v-row> -->
-
-                         <!-- <v-row>
-                             <v-col cols="12" md="6" class="first">
-                                <div class="alis">
-                                    <h3>874.28</h3>
-                                    <div class="sarrafiye_ad">22 GRAM</div>
-                                    <h3>874.28</h3>
-                                </div>
-                                
-                            </v-col>
-                            <v-col cols="12" md="6" class="last">
-                                <div class="alis">
-                                    <h3>874.28</h3>
-                                    <div class="sarrafiye_ad">24 GRAM</div>
-                                    <h3>874.28</h3>
-                                </div>
-                            </v-col>
-                         </v-row> -->
-
+                            <!-- </v-col> -->     
                     </div>
                     
                 </div>
@@ -455,21 +232,7 @@ export default {
                 this.invalid_token()
             }
             if (response.status == 200) {
-                // let arr_response = []
-                // let array_index = 0;
-                // response.data.forEach(el => {
-                // el.alis = this.format_money(el.alis,4,".",",")
-                // el.satis = this.format_money(el.satis,4,".",",")
-                // if (el.kur == "KGRTRY") {
-                //     this.kgrtry_alis = el.alis;
-                //     this.kgrtry_satis = el.satis;
-                // }else{
-                //     arr_response.push(el)
-                // }
-                // array_index++;
-                // });
-                // response.data.splice(0,1); // kgrtry değeri döviz kurları ile aynı data içerisinde geldiği için onu data içerisinden kaldırıyoruz
-                // KGRTRY indexi 0 olmalı.
+              
                 this.currency_json.sarrafiye_json =response.data;
                 this.currency_json.sarrafiye_json.forEach(el => {
                         el.alis = this.format_money(el.alis,2,".",",")
@@ -477,8 +240,6 @@ export default {
                         // this.sarrafiye.push(el)
                 });
                 this.sarrafiye = this.currency_json.sarrafiye_json
-                // console.log(this.currency_json.sarrafiye_json);
-                // this.loading = false;
             }
             resolve(response.data)
             })
@@ -516,22 +277,7 @@ export default {
                 this.invalid_token()
             }
             if (response.status == 200) {
-                // let arr_response = []
-                // let array_index = 0;
-                // response.data.forEach(el => {
-                    // el.alis = this.format_money(el.alis,4,".",",")
-                // el.satis = this.format_money(el.satis,4,".",",")
-                // if (el.kur == "KGRTRY") {
-                    //     this.kgrtry_alis = el.alis;
-                //     this.kgrtry_satis = el.satis;
-                // }else{
-                    //     arr_response.push(el)
-                // }
-                // array_index++;
-                // });
-                // response.data.splice(0,1); // kgrtry değeri döviz kurları ile aynı data içerisinde geldiği için onu data içerisinden kaldırıyoruz
-                // KGRTRY indexi 0 olmalı.
-
+              
                 this.currency_json.doviz_json =response.data;
                 this.currency_json.doviz_json.forEach(el => {
                     if(el.kur != "KGRTRY"){
@@ -598,32 +344,14 @@ export default {
 
 
         this.interval = setInterval(() => {
-        // this.doviz=[]
-        // this.sarrafiye=[]
-
-        // this.get_doviz()
-        // this.get_sarrafiye()
-
-        
-
-        // Concise way to format time according to system locale.
-        // In my case this returns "3:48:00 am"
-        // var moment = require('moment-timezone');
-        // var date = new Date();
-        // this.time = moment(date).tz("Europe/Istanbul").format();
-
+       
         this.time = Intl.DateTimeFormat("tr-TR", {
             hour: 'numeric',
             minute: 'numeric',
             second: 'numeric',
             timeZone:'Europe/Istanbul'
         }).format()
-
-
         
-
-        
-        // console.log(this.time);
         }, 1000)
         
     },
