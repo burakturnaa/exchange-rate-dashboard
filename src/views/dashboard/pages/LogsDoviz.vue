@@ -4,27 +4,7 @@
     fluid
     tag="section"
   >
-      <!-- <v-col
-        cols="12"
-      >
-        <base-material-card
-          color="#1d1d1d"
-          class="px-5 py-3"
-          min-height="200px"
-          style="display:flow-root; text-align:center"
-        >
-          <template v-slot:heading>
-            <div @click="clickevent(0)" class="display-2 font-weight-light">
-              İşlemler
-            </div>
-            <div class="subtitle-1 font-weight-light">
-            </div>
-          </template>
-          <v-card-text >
-              
-          </v-card-text>
-        </base-material-card>
-      </v-col> -->
+      
       <v-col
         cols="12"
 
@@ -46,18 +26,7 @@
             </div>
           </template> 
           <v-card-text>
-            <!-- <v-data-table
-              :key="refresh_key"
-              :items-per-page="pagination.rowsPerPage"
-              :headers="headers_all_check_points"
-              :items="logs"
-              item-key="id"
-              class="elevation-1 pt-2 text-center"
-              :loading="loading"
-              hide-default-footer
-              @update:sort-by="updateSort('by', $event)"
-              @update:sort-desc="updateSort('desc', $event)"
-            > -->
+           
 
             <v-data-table
              
@@ -160,15 +129,7 @@
                       <v-row>
                       <v-col cols="12" lg="4">
                      
-                      <!-- <v-text-field
-                        style="font-size: 18px !important"
-                        v-model.trim="title"
-                        label="Kur adı"
-                        prepend-icon="mdi-subtitles-outline"
-                        v-on:keyup.enter="get_doviz_logs_filter()"
-                        class="mt-5"
-                        outlined
-                      ></v-text-field> -->
+                    
 
                       <v-select
                       style="font-size: 18px !important"
@@ -220,20 +181,10 @@
                       </v-row>
                          
                     </v-card-text>
-                  </v-card>
-
-            
+                  </v-card>            
               </v-row>
-
-                
                 
               </template>
-
-             
-            
-
-           
-
             </v-data-table>
              
           </v-card-text> 
@@ -399,18 +350,7 @@ import { validationMixin } from 'vuelidate'
 
       _T() { return this.$t }, // for i18 ;)
       headers_doviz(){
-          let tbl_headers =  [
-          // {
-          //   sortable: true,
-          //   text: "UID",
-          //   value: 'uid',
-          // },
-          // {
-          //   sortable: false,
-          //   text: "ID",
-          //   value: 'id',
-          //   align: 'left'
-          // },
+          let tbl_headers =  [        
           {
             sortable: false,
             text: "Kur",
@@ -446,32 +386,7 @@ import { validationMixin } from 'vuelidate'
             text: "Eski Satış Fiyatı",
             value: 'old_satis',
             align: 'center'
-          },
-          // {
-          //   sortable: true,
-          //   text: "Kayıt Tarihi",
-          //   value: 'req_date',
-          //   align: 'center'
-          // },
-          // {
-          //   sortable: false,
-          //   text: "Saat",
-          //   value: 'req_time',
-          //   align: '',
-          // },
-          // {
-          //   sortable: false,
-          //   text: this.$t('status'),
-          //   value: 'status',
-          //   align: 'center',
-          // },
-          // {
-          //   sortable: false,
-          //   text: this.$t('description'),
-          //   value: 'description',
-          //   align: 'left',
-          // },
-        //   { text: this.$t('action'), value: "actions", align:"center", sortable: false }
+          },        
         
         ]
         return tbl_headers ;
@@ -486,13 +401,6 @@ import { validationMixin } from 'vuelidate'
         await this.get_doviz_logs();
         await this.get_doviz_titles();
         this.loading = false;
-
-
-
-        // this.loading = true;
-        // await this.get_customers();
-        // await this.filter();        
-        // this.loading = false;
 
       },
 
