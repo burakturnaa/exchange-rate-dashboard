@@ -4,27 +4,7 @@
     fluid
     tag="section"
   >
-      <!-- <v-col
-        cols="12"
-      >
-        <base-material-card
-          color="#1d1d1d"
-          class="px-5 py-3"
-          min-height="200px"
-          style="display:flow-root; text-align:center"
-        >
-          <template v-slot:heading>
-            <div @click="clickevent(0)" class="display-2 font-weight-light">
-              İşlemler
-            </div>
-            <div class="subtitle-1 font-weight-light">
-            </div>
-          </template>
-          <v-card-text >
-              
-          </v-card-text>
-        </base-material-card>
-      </v-col> -->
+   
       <v-col
         cols="12"
 
@@ -46,19 +26,7 @@
             </div>
           </template> 
           <v-card-text>
-            <!-- <v-data-table
-              :key="refresh_key"
-              :items-per-page="pagination.rowsPerPage"
-              :headers="headers_all_check_points"
-              :items="logs"
-              item-key="id"
-              class="elevation-1 pt-2 text-center"
-              :loading="loading"
-              hide-default-footer
-              @update:sort-by="updateSort('by', $event)"
-              @update:sort-desc="updateSort('desc', $event)"
-            > -->
-
+           
             <v-data-table
               :headers="headers_doviz"
               :items-per-page="pagination.rowsPerPage"
@@ -160,16 +128,6 @@
                       <v-row>
                       <v-col cols="12" lg="4">
                      
-                      <!-- <v-text-field
-                        style="font-size: 18px !important"
-                        v-model.trim="title"
-                        label="Kur adı"
-                        prepend-icon="mdi-subtitles-outline"
-                        v-on:keyup.enter="filter()"
-                        class="mt-5"
-                        outlined
-                      ></v-text-field> -->
-
                       <v-select
                       style="font-size: 18px !important"
                       class="mt-5"
@@ -203,20 +161,6 @@
                           
                       </v-col>
 
-                        <!-- <v-col cols="12" class="text-right">
-                          <v-btn
-                          color="#050a23"
-                          @click="clear_filters"
-                          >
-                            Tüm Filtreleri Temizle
-                          </v-btn>
-                          <v-btn 
-                          color="#050a23"
-                          @click="filter"
-                          >
-                            Arama
-                          </v-btn>
-                        </v-col> -->
                       </v-row>
                     
                     </v-card-text>
@@ -390,17 +334,7 @@ import { validationMixin } from 'vuelidate'
       _T() { return this.$t }, // for i18 ;)
       headers_doviz(){
           let tbl_headers =  [
-          // {
-          //   sortable: true,
-          //   text: "UID",
-          //   value: 'uid',
-          // },
-        //   {
-        //     sortable: false,
-        //     text: "ID",
-        //     value: 'id',
-        //     align: 'left'
-        //   },
+          
           {
             sortable: false,
             text: "Kur",
@@ -437,32 +371,7 @@ import { validationMixin } from 'vuelidate'
             value: 'old_satis',
             align: 'center'
           },
-          // {
-          //   sortable: true,
-          //   text: "Kayıt Tarihi",
-          //   value: 'req_date',
-          //   align: 'center'
-          // },
-          // {
-          //   sortable: false,
-          //   text: "Saat",
-          //   value: 'req_time',
-          //   align: '',
-          // },
-          // {
-          //   sortable: false,
-          //   text: this.$t('status'),
-          //   value: 'status',
-          //   align: 'center',
-          // },
-          // {
-          //   sortable: false,
-          //   text: this.$t('description'),
-          //   value: 'description',
-          //   align: 'left',
-          // },
-        //   { text: this.$t('action'), value: "actions", align:"center", sortable: false }
-        
+         
         ]
         return tbl_headers ;
       },
@@ -476,11 +385,6 @@ import { validationMixin } from 'vuelidate'
         await this.get_sarrafiye_logs();
         await this.get_sarrafiye_titles();
         this.loading = false;
-
-        // this.loading = true;
-        // await this.get_customers();
-        // await this.filter();        
-        // this.loading = false;
 
       },
 
@@ -505,9 +409,6 @@ import { validationMixin } from 'vuelidate'
           var dd = String(today.getDate()).padStart(2, '0');
           var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
           var yyyy = today.getFullYear();
-          
-          // console.log("WATCH");
-
           today = yyyy + '-' + mm + '-' + dd;
           this.start_date_text = today
         }
@@ -516,9 +417,7 @@ import { validationMixin } from 'vuelidate'
       clear_date(val){
           if (typeof val != "undefined") {
 
-            var d = new Date(val)
-            // console.log(d);
-                
+            var d = new Date(val)               
             var day = "";
             
             if (d.getDate().toString().length == 1) {
@@ -546,16 +445,7 @@ import { validationMixin } from 'vuelidate'
             this.clear_date_text = val
         }
       },
-    //   first_date(){
-    //       if (this.first_date != "") {
-    //           this.first_date += "T:00:00:00"
-    //       }
-    //   },
-    //   second_date(){
-    //       if (this.second_date != "") {
-    //           this.second_date += "T:00:00:00"
-    //       }
-    //   }
+    
     },
 
     created(){
