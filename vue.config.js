@@ -2,11 +2,11 @@ const fs = require('fs')
 module.exports = {
   configureWebpack:{
     devServer: {
-      proxy : 'https://api.domainname.com:8000',
+      proxy : 'https://api.domain.com:8000',
       headers: { "Access-Control-Allow-Origin": "*"},
       https: {
-        key: fs.readFileSync('./ssl/api.domainname.com.key'),
-        cert: fs.readFileSync('./ssl/api.domainname.com.crt'),
+        key: fs.readFileSync('./ssl/api.domain.com.key'),
+        cert: fs.readFileSync('./ssl/api.domain.com.crt'),
       },
       disableHostCheck: true
     },
