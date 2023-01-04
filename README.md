@@ -4,6 +4,6 @@ Customized Material Dashboard with Vue.js
 
 Install all the dependencies of the project
 
-### `npm run serve`
+### `npm run servessl`
 
 Runs the vue app in the development mode.\
